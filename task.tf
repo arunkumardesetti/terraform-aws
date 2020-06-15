@@ -53,7 +53,7 @@ resource "aws_instance" "web" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo yum install httpd  php git -y",
+      "sudo yum install java httpd php git -y",
       "sudo systemctl restart httpd",
       "sudo systemctl enable httpd",
     ]
